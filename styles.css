@@ -57,7 +57,7 @@ li {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url(pic.jpg);
+    background-image: url(images/pic.jpg);
 }
 
 #grey {
