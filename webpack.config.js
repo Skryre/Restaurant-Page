@@ -6,10 +6,10 @@ module.exports = {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
   },
-  devtool: 'inline-source-map',
-  optimization: {
-    runtimeChunk: 'single',
+  devServer: {
+    static: './dist',
   },
+  devtool: 'inline-source-map',
   optimization: {
     runtimeChunk: 'single',
   },
