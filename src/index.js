@@ -1,22 +1,34 @@
-const pageLoad = (() => {
-    //container
-    const contentContainer = document.querySelector("#content");
-  
-    const header = document.createElement("header");
-    header.innerHTML = `
-    <nav>
-    <h2>Food-on-a-Plate</h2>
-    <a href="#" class="hamburger">
-      <span class="line line1"></span>
-      <span class="line line2"></span>
-      <span class="line line3"></span>
-    </a>
-    <ul class="links">
-      <li data-tab-target="#home" class="tab red">Home</li>
-      <li data-tab-target="#menu" class="tab">Menu</li>
-      <li data-tab-target="#contact" class="tab">Contact us</li>
-    </ul>
-  </nav>`;
-  
-      contentContainer.appendChild(header)
-  })();
+import loadHome from "./home";
+import loadMenu from "./menu";
+import loadContact from "./contact";
+
+const contentContainer = document.querySelector("#content");
+
+const header = document.createElement("header");
+header.innerHTML = `
+<nav>
+<h2>SoulFoodSav</h2>
+<ul class="links">
+    <li id="home">Home</li>
+    <li id="menu">Menu</li>
+    <li id="contact">Contact us</li>
+</ul>
+</nav>`;
+
+contentContainer.appendChild(header)
+
+const home = document.querySelector("#home")
+const menu = document.querySelector("#menu")
+const contact = document.querySelector("#contact")  
+
+home.addEventListener(`click`, ()=> {
+    loadHome()
+})
+menu.addEventListener(`click`, ()=> {
+    loadMenu()
+})   
+contact.addEventListener(`click`, ()=> {
+    loadContact()
+})   
+
+loadHome()
