@@ -4,8 +4,8 @@ import loadContact from "./contact";
 
 const contentContainer = document.querySelector("#content");
 
-const header = document.createElement("header");
-header.innerHTML = `
+const main = document.createElement("main");
+main.innerHTML = `
 <nav>
 <h2>SoulFoodSav</h2>
 <ul class="links">
@@ -13,9 +13,11 @@ header.innerHTML = `
     <li id="menu">Menu</li>
     <li id="contact">Contact us</li>
 </ul>
-</nav>`;
+</nav>
+<div id="container"></div>
+`;
 
-contentContainer.appendChild(header)
+contentContainer.appendChild(main)
 
 const home = document.querySelector("#home")
 const menu = document.querySelector("#menu")
@@ -26,7 +28,7 @@ home.addEventListener(`click`, ()=> {
 })
 menu.addEventListener(`click`, ()=> {
     loadMenu()
-})   
+})
 contact.addEventListener(`click`, ()=> {
     loadContact()
 })   
